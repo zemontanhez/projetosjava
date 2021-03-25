@@ -2,7 +2,6 @@ package br.montanhez.spring02.controler;
 
 import java.util.List;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,6 +32,8 @@ public class UsuarioController {
         return ResponseEntity.notFound().build();
     }
 
+
+
     @GetMapping("/all")
     public List<Usuario> getAllUser(){
         List<Usuario> lista = (List<Usuario>) repo.findAll();
@@ -47,5 +48,4 @@ public class UsuarioController {
         }
         return ResponseEntity.notFound().build();
     }
-
 }
